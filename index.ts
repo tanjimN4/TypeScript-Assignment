@@ -8,26 +8,15 @@
             return input.toUpperCase();
         }
     }
-    // console.log(formatString("helLO"));
     //
 }
 
 {
     //
-    const books = [
-        { title: "Book A", rating: 4.5 },
-        { title: "Book B", rating: 3.2 },
-        { title: "Book C", rating: 5.0 }
-    ];
-
     function filterByRating(items: { title: string; rating: number }[])
         : { title: string; rating: number }[] {
         return items.filter(item => item.rating > 4);
     }
-
-
-    // console.log(filterByRating(books));
-
     //
 }
 
@@ -36,10 +25,6 @@
     function concatenateArrays<T>(...arrays: T[][]): T[] {
         return arrays.reduce((acc, current) => acc.concat(current), []);
     }
-    const a = concatenateArrays(["a", "b"], ["c"]);
-    const b = concatenateArrays([1, 2], [3, 4], [5]);
-    // console.log(a,b);
-
     //
 }
 
@@ -66,12 +51,6 @@
             return `Model :${this.model}`
         }
     }
-    const myVehicle = new Vehicle("Toyota", 2015);
-    const myCar = new car("Toyota", 2015, "Camry");
-    const data = myVehicle.getInfo()
-    const data2 = myCar.getModel()
-    // console.log(data2);
-
     //
 }
 
@@ -85,8 +64,6 @@
             return value * 2
         }
     }
-    // console.log(processValue('dfghj'));
-
     //
 }
 
@@ -107,16 +84,6 @@
             }, products[0]);
         }
     }
-    const products = [
-        { name: "Pen", price: 10 },
-        { name: "Notebook", price: 25 },
-        { name: "Bag", price: 50 }
-    ];
-
-    // console.log(getMostExpensiveProduct(products));
-
-    // Output: { name: "Bag", price: 50 }
-
     //
 }
 
@@ -139,16 +106,11 @@
             return 'Weekday'
         }
     }
-
-    // console.log(getDayType(Day.Monday));
-    // console.log(getDayType(Day.Sunday));
-
     //
 }
 
 {
     //
-
     async function squareAsync(n: number): Promise<number> {
         if(n>0){
             return new Promise((res)=>{
@@ -158,10 +120,5 @@
             return Promise.reject('Error: Negative number not allowed')
         }
     }
-    // squareAsync(4).then(console.log)
-    // squareAsync(-3).catch(console.error)
-    
-    
-
     //
 }
